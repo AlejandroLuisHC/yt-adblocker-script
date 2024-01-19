@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # YouTube Adblocker Script
 ## Description
 This script enhances your YouTube experience by blocking ads using Tampermonkey and Enhancer for YouTube. Follow the instructions below to set it up.
