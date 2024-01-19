@@ -27,7 +27,7 @@
             const adShowing = document.querySelector('.ad-showing');
             const bannerShowing = document.querySelector('#banner');
             const playerAdsShowing = document.querySelector('#player-ads');
-            const skipButtonShowing = document.querySelector('#youtube-ad-skip-button');
+            const skipButtonShowing = document.querySelector('.ytp-ad-skip-button-modern');
             const button = document.querySelector('#efyt-not-interested');
 
             bannerShowing?.remove();
