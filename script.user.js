@@ -4,8 +4,8 @@
 // @version      1.0.0
 // @description  Removes ads from YouTube videos and pages by using Enhancer for YouTube's 'Remove Ads' button.
 // @author       AlejandroLHC
-// @updateURL    https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.js
-// @downloadURL  https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.js
+// @updateURL    https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.user.js
+// @downloadURL  https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.user.js
 // @match        https://www.youtube.com/*
 // ==/UserScript==
 
@@ -81,7 +81,7 @@
             return;
         }
 
-        const scriptUrl = 'https://raw.githubusercontent.com/AlejandroLuisHC/yt-adblocker-script/main/script.js';
+        const scriptUrl = 'https://raw.githubusercontent.com/AlejandroLuisHC/yt-adblocker-script/main/script.user.js';
 
         fetch(scriptUrl)
             .then(response => response.text())
