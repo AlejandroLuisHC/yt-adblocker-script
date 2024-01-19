@@ -56,7 +56,7 @@
             }
         }
 
-        if (/https:\/\/www\.youtube\.com\/.*/.test(currentURL)) {
+        if (/https:\/\/www\.youtube\.com\/$/.test(currentURL)) {
             const headAdShowing = document.querySelector('#masthead-ad');
             const adCardShowing = document.querySelector('ytd-ad-slot-renderer');
             const ytAdBanner = document.querySelector('ytd-statement-banner-renderer');
