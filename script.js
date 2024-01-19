@@ -3,7 +3,9 @@
 // @icon         https://www.gstatic.com/youtube/img/branding/favicon/favicon_192x192.png
 // @version      1.0.0
 // @description  Removes ads from YouTube videos and pages by using Enhancer for YouTube's 'Remove Ads' button.
-// @author       Alejandro L. Herrero 
+// @author       AlejandroLHC
+// @updateURL    https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.js
+// @downloadURL  https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.js
 // @match        https://www.youtube.com/*
 // ==/UserScript==
 
