@@ -68,12 +68,45 @@
                     adParent.remove();
                 }
 
-                if(ytAdBanner) {
+                if (ytAdBanner) {
                     const adParent = ytAdBanner.parentNode.parentNode;
                     adParent.remove();
                 }
             }
         }
     }
+
+    function checkUpdate() {
+        if (!window.location.href.includes("youtube.com")) {
+            return;
+        }
+
+        const scriptUrl = 'https://raw.githubusercontent.com/AlejandroLuisHC/yt-adblocker-script/main/script.js';
+
+        fetch(scriptUrl)
+            .then(response => response.text())
+            .then(data => {
+                const match = data.match(/@version\s+(\d+\.\d+)/);
+                if (match) {
+                    const githubVersion = parseFloat(match[1]);
+                    const currentVersion = parseFloat(GM_info.script.version);
+
+                    if (githubVersion > currentVersion) {
+                        console.log('YouTube ad-blocker script: A new version is available. Please update your script.');
+
+                        if (window.confirm("YouTube ad-blocker script: A new version is available. Please update your script.")) {
+                            window.location.replace(scriptUrl);
+                        }
+                    }
+                } else {
+                    console.error('YouTube ad-blocker script: Unable to extract version from the GitHub script.');
+                }
+            })
+            .catch(error => {
+                console.error('YouTube ad-blocker script: Error checking for updates:', error);
+            });
+    }
+
+    checkUpdate();
     setInterval(removeAds, searchInterval);
 })();
