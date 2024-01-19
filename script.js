@@ -95,7 +95,7 @@
                         console.log('YouTube ad-blocker script: A new version is available. Please update your script.');
 
                         if (window.confirm("YouTube ad-blocker script: A new version is available. Please update your script.")) {
-                            window.location.replace(scriptUrl);
+                            window.open(scriptUrl);
                         }
                     }
                 } else {
