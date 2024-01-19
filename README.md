@@ -15,7 +15,7 @@ This script enhances your YouTube experience by blocking ads using Tampermonkey 
    - [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
    - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
 
-- Install [Enhancer for YouTube extension](https://www.mrfdev.com/enhancer-for-youtube) on your browser.
+- Install **Enhancer for YouTube** extension on your browser.
    - [Chrome](https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle)
    - [Edge](https://microsoftedge.microsoft.com/addons/detail/enhancer-for-youtube%E2%84%A2/dlgfaleeejmphhnemjgiaekdbonkagkd)
    - [Firefox](https://addons.mozilla.org/es/firefox/addon/enhancer-for-youtube/)
@@ -30,4 +30,4 @@ This script enhances your YouTube experience by blocking ads using Tampermonkey 
 Feel free to create issues or pull requests in this GitHub repository for suggestions, bug reports, or contributions to this script.
 
 ## License 
-Licensed under [MIT License](https://github.com/AlejandroLuisHC/yt-adblocker-script/blob/main/LICENSE)
+Licensed under the [MIT License](https://github.com/AlejandroLuisHC/yt-adblocker-script/blob/main/LICENSE)
