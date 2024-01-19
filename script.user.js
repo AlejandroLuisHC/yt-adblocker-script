@@ -12,7 +12,7 @@
 (function () {
     'use strict';
 
-    var searchInterval = 200
+    var searchInterval = 100
     var failCounter = 0;
     var masterSwitch = true;
 
