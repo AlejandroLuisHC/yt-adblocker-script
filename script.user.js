@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Ad-blocker
 // @icon         https://www.gstatic.com/youtube/img/branding/favicon/favicon_192x192.png
-// @version      2.0
+// @version      1.3
 // @description  Removes ads from YouTube videos and pages using Enhancer for YouTube's 'Remove Ads' button.
 // @author       AlejandroLHC
 // @updateURL    https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.user.js
