@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Ad-blocker
 // @icon         https://www.gstatic.com/youtube/img/branding/favicon/favicon_192x192.png
-// @version      1.3
+// @version      1.3.1
 // @description  Removes ads from YouTube videos and pages using Enhancer for YouTube's 'Remove Ads' button.
 // @author       AlejandroLHC
 // @updateURL    https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.user.js
@@ -16,6 +16,7 @@
     let failCounter = 0;
     let blockCounter = 0;
     let masterSwitch = true;
+    let allowUpdate = true;
 
     function removeAds() {
         const currentURL = window.location.href;
@@ -113,7 +114,7 @@
     }
 
     function checkUpdate() {
-        if (!window.location.href.includes("youtube.com")) {
+        if (!allowUpdate || !window.location.href.includes("youtube.com")) {
             return;
         }
 
@@ -122,34 +123,37 @@
         fetch(scriptUrl)
             .then(response => response.text())
             .then(data => {
-                const match = data.match(/@version\s+(\d+\.\d+)/);
-                if (match) {
-                    handleVersionCheck(parseFloat(match[1]));
-                } else {
-                    console.error('YouTube ad-blocker script: Unable to extract version from the GitHub script.');
-                }
-            })
+            const match = data.match(/@version\s+(\d+\.\d+)/)[1];
+            if (match) {
+                const majorVersion = match.split('.')[0];
+                handleVersionCheck(majorVersion, scriptUrl);
+            } else {
+                console.error('YouTube ad-blocker script: Unable to extract version from the GitHub script.');
+            }
+        })
             .catch(error => {
-                console.error('YouTube ad-blocker script: Error checking for updates:', error);
-            });
+            console.error('YouTube ad-blocker script: Error checking for updates:', error);
+        });
     }
 
-    function handleVersionCheck(githubVersion) {
-        const currentVersion = parseFloat(GM_info.script.version);
+    function handleVersionCheck(version, script) {
+        const currentVersion = GM_info.script.version.split('.')[0];
 
-        if (githubVersion > currentVersion) {
-            handleUpdateAvailable();
+        if (version > currentVersion) {
+            handleUpdateAvailable(version, script);
         }
     }
 
-    function handleUpdateAvailable() {
-        console.log('YouTube ad-blocker script: A new version is available. Please update your script.');
-
-        if (window.confirm("YouTube ad-blocker script: A new version is available. Please update your script.")) {
-            window.open(scriptUrl);
+    function handleUpdateAvailable(version, script) {
+        if (window.confirm(`A major update is available for the YouTube ad-blocker script. Please update to version ${version}.\n\nPress 'OK' to redirect and upgrade the script.\nPress 'Cancel' to not update for this session.`)) {
+            window.open(script);
+        } else {
+            allowUpdate = false;
         }
     }
 
+    removeAds();
     checkUpdate();
     setInterval(removeAds, searchInterval);
+    setInterval(checkUpdate, 30 * 60 * 1000);
 })();
