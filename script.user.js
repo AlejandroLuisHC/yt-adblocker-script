@@ -28,7 +28,7 @@
         if (/https:\/\/www\.youtube\.com\/watch\?.*/.test(currentURL)) {
             const adShowing = document.querySelector('.ad-showing');
             const bannerShowing = document.querySelector('.banner');
-            const banner2Showing = document.querySelector('#ytd-engagement-panel-section-list-renderer')
+            const banner2Showing = document.querySelector('ytd-engagement-panel-section-list-renderer')
             const adMiniBanner = document.querySelector('.ytd-ad-slot-renderer');
             const playerAdsShowing = document.querySelector('#player-ads');
             const skipButtonShowing = document.querySelector('#ytp-ad-skip-button-modern');
