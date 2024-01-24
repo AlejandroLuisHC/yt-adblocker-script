@@ -28,10 +28,8 @@
         if (/https:\/\/www\.youtube\.com\/watch\?.*/.test(currentURL)) {
             const adShowing = document.querySelector('.ad-showing');
             const ad2Showing = document.querySelector('#video-ads');
-            const bannerShowing = document.querySelector('.banner');
-            const banner2Showing = document.querySelector('ytd-engagement-panel-section-list-renderer')
+            const bannerShowing = document.querySelector('.player-ads');
             const adMiniBanner = document.querySelector('.ytd-ad-slot-renderer');
-            const playerAdsShowing = document.querySelector('#player-ads');
             const skipButtonShowing = document.querySelector('#ytp-ad-skip-button-modern');
             const adContainerShowing = document.querySelector('.ytp-cultural-moment-player-content')
             const blockMessageShown = document.querySelector('ytd-enforcement-message-view-model');
@@ -40,9 +38,7 @@
 
             removeElement(bannerShowing);
             removeElement(ad2Showing);
-            removeElement(banner2Showing);
             removeElement(adMiniBanner);
-            removeElement(playerAdsShowing);
             removeElement(adContainerShowing);
             removeElement(premiumDialogShowing.parentNode);
             clickElement(skipButtonShowing);
@@ -56,17 +52,15 @@
                 handleAdBlockerRetry();
             }
 
-            if (adShowing || ad2Showing || adContainerShowing || skipButtonShowing || playerAdsShowing) {
-                if (button) {
-                    button.click();
-                    failCounter = 0;
-                } else {
-                    handleButtonNotFound();
-                }
+            if (button) {
+                button.click();
+                failCounter = 0;
+            } else {
+                handleButtonNotFound();
+            }
 
-                if (failCounter > 10) {
-                    handleFailedToFindButton();
-                }
+            if (failCounter > 10) {
+                handleFailedToFindButton();
             }
         }
 
