@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Ad-blocker
 // @icon         https://www.gstatic.com/youtube/img/branding/favicon/favicon_192x192.png
-// @version      1.4.4
+// @version      1.4.5
 // @description  Removes ads from YouTube videos and pages using Enhancer for YouTube's 'Remove Ads' button.
 // @author       AlejandroLHC
 // @updateURL    https://github.com/AlejandroLuisHC/yt-adblocker-script/raw/main/script.user.js
@@ -34,7 +34,7 @@
             const adContainerShowing = document.querySelector('.ytp-cultural-moment-player-content')
             const blockMessageShown = document.querySelector('ytd-enforcement-message-view-model');
             const premiumDialogShowing = document.querySelector('.mealbar-promo-renderer');
-            const button = document.querySelector('#efyt-not-interested');
+            const button = document.querySelector('efyt-not-interested');
 
             removeElement(bannerShowing);
             removeElement(ad2Showing);
