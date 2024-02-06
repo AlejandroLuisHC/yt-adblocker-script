@@ -5,7 +5,7 @@
 
 YOUTUBE JUST BLOCKED THE BYPASS THIS SCRIPT WAS USING. I'M CURRENTLY WORKING ON A WAY AROUND.
 
-*Expected Completion: Feb 7th.*
+*Expected Completion: Feb 14th.*
 
 ## Description
 This script enhances your YouTube experience by blocking ads using **Tampermonkey**. 
