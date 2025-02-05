@@ -1,11 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # YouTube Adblocker Script
 
-🚧 **UNDER MAINTENANCE** 🚧 
+🚧 **AT A STALL** 🚧 
 
-YOUTUBE JUST BLOCKED THE BYPASS THIS SCRIPT WAS USING. I'M CURRENTLY WORKING ON A WAY AROUND.
+YOUTUBE JUST BLOCKED THE BYPASS THIS SCRIPT WAS USING.
 
-*Expected Completion: Feb 14th.*
+**NOT WORKING NOR SUPPORTING THIS SOFTWARE ANYMORE**
 
 ## Description
 This script enhances your YouTube experience by blocking ads using **Tampermonkey**. 
